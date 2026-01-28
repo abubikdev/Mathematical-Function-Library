@@ -22,6 +22,13 @@ def select_and_use_function():
         print("Obsah obdélníku je " + str(result))
         return
 
+    elif selected_function == "3":
+        radius: str = input("Zadejte poloměr koule > ")
+
+        result = 4 * 3.14 * int(radius) * int(radius)
+        print("Obsah koule je " + str(result))
+        return
+
 
 
 select_and_use_function()
