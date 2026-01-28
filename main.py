@@ -11,10 +11,16 @@ def select_and_use_function():
         side_a: str = input("Zadejte délku jedné strany > ")
 
         result = int(side_a) * int(side_a)
-        print("Obsah čtverce je" + result)
+        print("Obsah čtverce je " + str(result))
         return
 
+    elif selected_function == "2":
+        side_a: str = input("Zadejte délku strany a > ")
+        side_b: str = input("Zadejte délku strany b > ")
 
+        result = int(side_a) * int(side_b)
+        print("Obsah obdélníku je " + str(result))
+        return
 
 
 
