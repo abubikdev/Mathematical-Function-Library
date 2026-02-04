@@ -15,6 +15,10 @@ def triangle_area(a, h):
 def cube_volume(a):
     return a * a * a
 
+def cuboid_volume(length, width, height):
+    return length * width * height
+
+
 def choose_unit():
     global unit
 
@@ -48,6 +52,7 @@ def select_and_use_function():
     print("3. Kruh")
     print("4. Trojúhelník")
     print("5. Krychle (objem)")
+    print("6. Kvádr (objem)")
 
     choice = int(input("Zadejte číslo tvaru > "))
 
@@ -73,6 +78,12 @@ def select_and_use_function():
         side = float(input("Zadejte délku hrany krychle > "))
         result = cube_volume(side)
         print("Objem krychle je " + str(result) + " " + unit + "³")
+    elif choice == 6:
+        length = float(input("Zadejte délku hrany kvádra > "))
+        width = float(input("Zadejte šířku kvádra > "))
+        height = float(input("Zadejte výšku kvádra > "))
+        result = cuboid_volume(length, width, height)
+        print("Objem kvádru je " + str(result) + " " + unit + "³")
     else:
         print("Neplatná volba")
     menu()
